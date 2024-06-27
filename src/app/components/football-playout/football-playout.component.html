@@ -1,0 +1,28 @@
+<div>
+  <div class="controls">
+    <button (click)="startGame('football')" [disabled]="gameInProgress">Start Football Match</button>
+    <button (click)="startGame('icehockey')" [disabled]="gameInProgress">Start Ice Hockey Match</button>
+  </div>
+  <div class="status">
+    <p *ngIf="message">{{ message }}</p>
+  </div>
+  <div class="scoreboard">
+    <div *ngFor="let fixture of fixtures">
+      <div class="team-score">
+        <img [src]="'app/assets/team-badges/' + fixture.homeTeamAbbr + '.png'" alt="{{ fixture.homeTeamAbbr }}">
+        <span>{{ fixture.homeTeamAbbr }}: {{ totalScores[fixture.homeTeamAbbr] || 0 }}</span>
+        <!-- <div *ngFor="let score of scores[fixture.homeTeamAbbr]; let i = index">
+          Player {{ i + 1 }}: {{ score }}
+        </div> -->
+      </div>
+      <div class="team-score">
+        <img [src]="'app/assets/team-badges/' + fixture.awayTeamAbbr + '.png'" alt="{{ fixture.awayTeamAbbr }}">
+        <span>{{ fixture.awayTeamAbbr }}: {{ totalScores[fixture.awayTeamAbbr] || 0 }}</span>
+        <!-- <div *ngFor="let score of scores[fixture.awayTeamAbbr]; let i = index">
+          Player {{ i + 1 }}: {{ score }}
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

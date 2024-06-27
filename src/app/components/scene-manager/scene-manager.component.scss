@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.tree-container {
+  width: 40%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.properties-panel {
+  width: 55%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.properties-panel h3 {
+  margin-top: 0;
+}

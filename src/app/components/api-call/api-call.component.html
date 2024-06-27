@@ -1,0 +1,20 @@
+<div *ngIf="bitcoinData" class="bitcoin-data-container">
+  <h2>{{ bitcoinData.chartName }} Price Index</h2>
+  <div class="time-info">
+    <p><strong>Updated:</strong> {{ bitcoinData.time.updated }}</p>
+    <p><strong>Updated ISO:</strong> {{ bitcoinData.time.updatedISO }}</p>
+    <p><strong>Updated UK:</strong> {{ bitcoinData.time.updateduk }}</p>
+  </div>
+
+  <h3>Disclaimer:</h3>
+  <p class="disclaimer">{{ bitcoinData.disclaimer }}</p>
+
+  <h3>Rates:</h3>
+  <div class="rates">
+    <div class="rate" *ngFor="let currency of getCurrencies(bitcoinData.bpi)">
+      <h4>{{ currency.description }} ({{ currency.code }})</h4>
+      <p><strong>Rate:</strong> {{ currency.rate }}</p>
+      <p [innerHTML]="currency.symbol"></p>
+    </div>
+  </div>
+</div>

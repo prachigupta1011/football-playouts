@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="tree-container">
+    <ul>
+      <li *ngIf="sceneData">
+        <app-tree-node [node]="sceneData" (select)="selectItem($event)"></app-tree-node>
+      </li>
+    </ul>
+  </div>
+  <div class="properties-panel" *ngIf="selectedItem">
+    <h4>Properties of {{ selectedItem.type }}</h4>
+    <app-properties-view [data]="selectedItem"></app-properties-view>
+  </div>
+</div>
