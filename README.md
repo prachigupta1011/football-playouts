@@ -96,14 +96,15 @@ The `assets/json/scene-manager.json` file contains the hierarchical data describ
 ## Running the Application
 
 1. Ensure the `scene-manager.json` file is in the `src/assets/json` directory.
+2. Install all packages npm install
 
-2. Run the application using the Angular CLI:
+3. Run the application using the Angular CLI:
     ```bash
-    ng serve
+    npm start
     ```
 
-3. Navigate to `http://localhost:4200` in your browser.
+4. Navigate to `http://localhost:4200` in your browser.
 
-4. Use the navigation menu to switch between different components and start the football or ice hockey match by clicking the respective start button. In the Scene Manager, click on any element in the tree to view its properties. In the API Call section, view the Bitcoin price index data fetched from the API.
+5. Use the navigation menu to switch between different components and start the football or ice hockey match by clicking the respective start button. In the Scene Manager, click on any element in the tree to view its properties. In the API Call section, view the Bitcoin price index data fetched from the API.
 
 Enjoy developing with FootballPlayouts!
