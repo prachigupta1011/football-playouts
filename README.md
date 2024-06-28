@@ -96,7 +96,7 @@ The `assets/json/scene-manager.json` file contains the hierarchical data describ
 ## Running the Application
 
 1. Ensure the `scene-manager.json` file is in the `src/assets/json` directory.
-2. Install all packages:    ```bash npm install ```
+2. Install all packages:    ``` npm install ```
 
 3. Run the application using the Angular CLI:
     ```bash
